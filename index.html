@@ -32,6 +32,35 @@
             aspect-ratio: 1;
             background-color: #e25e3e;
             border-radius: 50%;
+            position: relative;
+
+            &::after{
+                content: "";
+                width: inherit;
+                aspect-ratio: 1;
+                background-color: #000;
+                position: absolute;
+                top: 0 ;
+                left: 0;
+                border-radius: inherit;
+                animation: moonwalk  10s  ease-in-out;
+
+
+            }
+        }
+        @keyframes moonwalk {
+            0%{
+                translate: 100%;
+                scale: 1;
+            }
+            50%{
+                translate: 0%;
+                scale: 0.9;
+            }
+            100%{
+                translate: -100%;
+                scale: 1;
+            }
         }
     </style>
 </head>
